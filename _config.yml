@@ -1,2 +1,3 @@
 name: Keenin Vye, Schwifty Scripter
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
