@@ -2,7 +2,7 @@
 	<!-- List of Libraries -->
 	{% for post in site.categories.Utility %}
 		{% if post.tags contains 'Latest' %}
-			<li><a href="/utilities/{{post.utility}}/">
+			<li><a href="{{post.url}}">
 				<img alt="{{post.utility}}" class="app_icon_small" src="{{post.small_icon}}">{{post.utility}}</a></li>
 			<li>        
 		{% endif %}
