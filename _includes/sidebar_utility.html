@@ -1,0 +1,10 @@
+<ul>
+	<!-- List of Libraries -->
+	{% for post in site.categories.Utility %}
+		{% if post.tags contains 'Latest' %}
+			<li><a href="/utilities/{{post.utility}}/">
+				<img alt="{{post.utility}}" class="app_icon_small" src="{{post.small_icon}}">{{post.utility}}</a></li>
+			<li>        
+		{% endif %}
+	{% endfor %}
+</ul>

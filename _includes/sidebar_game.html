@@ -1,0 +1,10 @@
+<ul>
+	<!-- List of Games -->
+	{% for post in site.categories.Game %}
+		{% if post.tags contains 'Latest' %}
+			<li><a href="/games/{{post.game}}/">
+				<img alt="{{post.game}}" class="app_icon_small" src="{{post.small_icon}}">{{post.game}}</a></li>
+			<li>        
+		{% endif %}
+	{% endfor %}
+</ul>

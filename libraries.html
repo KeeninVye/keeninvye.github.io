@@ -1,0 +1,24 @@
+---
+layout: library
+title: Libraries
+permalink: /libraries/
+---
+    <h1><a href="/libraries/">Libraries</a></h1>
+    <!-- Libraries -->
+        {% for post in site.categories.Library %}
+            {% if post.tags contains 'Index' %}
+                <article>
+                    <header>
+                        <span class="release_date">
+                            <a href="{{site.baseurl}}{{post.library}}">Updated {{ post.date }}</a>
+                        </span>
+                        <h2><a href="{{site.baseurl}}{{post.library}}">{{post.library}}</a></h2>
+                    </header>
+                    <a href="{{site.baseurl}}{{post.library}}"><img alt="Flipped icon" class="app_icon" src="{{post.icon}}"></a>
+                    <p>{{post.excerpt}}</p>
+                    <footer>
+                        <div class="more"><a href="{{post.url}}">More details...</a></div>
+                    </footer>
+                </article>
+            {% endif %}
+        {% endfor %}
