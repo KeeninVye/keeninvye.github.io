@@ -9,7 +9,7 @@ small_icon: "/images/small_icon/billnye.gif"
 library: BillNye
 ---
 
-# Credit Statement parsing is now possible.
+### Credit Statement parsing is now possible.
 
 
 - Credit and Debit parsing use the same function, different parameters.

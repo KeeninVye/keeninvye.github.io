@@ -9,14 +9,22 @@ small_icon: "/images/small_icon/billnye.gif"
 library: BillNye
 ---
 
-# General:
+### General:
+
  - Added attr_reader for attributes in the Credit and Debit objects.
+
  - Added a 'to_string' function for the Credit and Debit objects. These functions return a comma-delimited string of the variables in that object.
+
  - Credit and Debit parsing use the same function with different parameters.
+
  - - Changes have begun, but will not be in affect.
 
-# Credit Statements:
+
+### Credit Statements:
+
  - Credit statement parsing is now possible. With a few tweaks from 0.0.2.
 
-# Debit Statements:
+
+### Debit Statements:
+
  - Fixed parsing problem for Debit transactions resulting in wrong 'Amount'.
