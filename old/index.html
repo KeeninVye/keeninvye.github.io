@@ -1,0 +1,20 @@
+---
+layout: home
+title: Keenin Vye, Senor Schwifty
+---
+    <div class="contents_wrap">
+        <div class="contents">
+            <h1><a href="http://KeeninVye.github.com/">{{ page.title }}</a></h1>
+        	<nav class="navbar" style="font-size: 80%">
+            	<ul>
+            		<li class="small"><span class="left active" title="You're here." >All news</span></li>
+            		<li class="small"><a class="" href="/literature/">Blog only</a></li>
+            		<li class="small"><a class="right" href="/releases/">Releases only</a></li>
+            	</ul>
+			</nav>
+			{% for post in site.tags.All %}
+                <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+				{{post.content}}
+			{% endfor %}
+      	</div>
+    </div>

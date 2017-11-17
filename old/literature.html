@@ -1,0 +1,19 @@
+---
+layout: home
+title: Blog
+permalink: /literature/
+---
+    <div class="contents_wrap">
+        <div class="contents"><h1><a href="http://KeeninVye.github.com/">{{ page.title }}</a></h1>
+        	<nav class="navbar" style="font-size: 80%">
+            	<ul>
+            		<li class="small"><a class="left" href="/">All news</a></li>
+            		<li class="small"><span class="active" title="You're here.">Blog only</a></li>
+            		<li class="small"><a class="right" href="/releases/">Releases only</span></li>
+            	</ul>
+			</nav>
+			{% for post in site.tags.Post %}
+				{{ post.content }}
+			{% endfor %}
+      	</div>
+    </div>

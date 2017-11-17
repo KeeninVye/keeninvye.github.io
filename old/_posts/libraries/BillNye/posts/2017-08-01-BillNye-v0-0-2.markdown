@@ -1,0 +1,19 @@
+---
+layout: library_post
+title: BillNye v0.0.2
+version: 0.0.2
+release: PreRelease
+categories: [Library]
+tags: [All, Release, Billnye]
+small_icon: "/images/small_icon/billnye.gif"
+library: BillNye
+---
+
+### Credit Statement parsing is now possible.
+
+
+- Credit and Debit parsing use the same function, different parameters.
+
+
+- This will change in the future.
+

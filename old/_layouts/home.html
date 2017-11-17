@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="ruby game games software development programming ai algorithms bi graphics" name="keywords">
+  <meta content="Scwifty's game-making blog and project portfolio" name="description">
+  <link href="/style/stylesheet.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/style/code_highlighting.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/style/slimbox2.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="script" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+    <div class="banner"><a title="Schwifty: A scripting addict with a love for problem solving" href="http://keeninvye.github.com">
+      <div class="banner_overlay"></div>
+    </a></div>
+      <nav class="navbar">
+        <ul>
+          <li><span title="You're here." class="active" >Home</span></li>
+          <li><a href="/games/">Games</a></li>
+          <li><a href="/libraries/">Libraries</a></li>
+          <li><a href="/utilities/">Utilities</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="col_mask right_menu">
+      <div class="col_left">
+
+          {{ content }}
+
+    <!--               BODY END          -->
+    <!--               SIDEBAR START          -->
+
+    <div class="sidebar"><nav class="menu">
+      <ul>
+        <li><span title="You're here." class="active" >Home</span>
+        </li>
+        <li><a href="/games/">Games</a>
+          <!-- List of dirs for Games -->
+          {% include sidebar_game.html %}
+        </li>
+          <li><a href="/libraries/">Libraries</a>
+            <!-- List of dirs for Library -->
+            {% include sidebar_library.html %}
+          </li>
+            <li><a href="/utilities/">Utilities</a><ul>
+            <!-- List of dirs for Utilities -->
+              {% include sidebar_utility.html %}
+              </ul>
+            </li>
+            <li><a href="/about/">About</a><ul>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+        <ul>
+          <li><a title="Schwifty's Github profile" href="http://github.com/KeeninVye">Developer profile</a></li>
+        </ul>
+        <hr>
+      </nav>
+    </div>
+
+    <!--               SIDEBAR END          -->
+    <!--               NAVBAR START          -->
+  </div>
+</div>
+<footer>
+  <div class="footer">
+    <p>Today, Schwifty was brought to you by the letter 'S'</p>
+  </div>
+</footer>
+</body>
+</html>
