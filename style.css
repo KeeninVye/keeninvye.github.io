@@ -164,7 +164,7 @@ img{
     }
 
     .container_right {
-        padding: 25% 25px 25px 25%;
+        padding: 22% 25px 25px 25%;
     }
 
     /* ---------- P H O T O S       F R O S T E D  --------------- */
@@ -173,6 +173,11 @@ img{
         text-align: center;
         width: 200px;
         transform: translate(0%, -100%);
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        color: #484848;
+        font-size: 14pt;
     }
 
     .project {
