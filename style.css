@@ -1,182 +1,185 @@
-body {
-    overflow:hidden;
-    background-color: #FFFFFF;
+
+/*
+DEFAULT OVERRIDES
+*/
+:root {
+	--page-color: white;
+	--text-color: black;
+	--tw-text-opacity: 1;
+	--text-hover-color: rgb(205 63 37/var(--tw-text-opacity));
+	--line-color: #ddd;
 }
-
-table {width: 300px;}
-
-.one {
-    margin: 0 0 0 12%;
-    float:left;
-    top: 0;
-}
-
-.two {
-    margin: 0 0 0 50%;
-    top: 0;
-    overflow:hidden;
-}
-
-tr.spaceUnder>td {
-  padding-bottom: 2em;
-}
-
-/* ---------- P H O T O S       F R O S T E D  --------------- */
-.project_title {
-    padding: 2px;
-    position: absolute;
-    text-align: center;
-    width: 200px;
-    transform: translate(0%, -100%);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: #484848;
-    font-size: 14pt;
-}
-
-.project {
-    position: relative;
-    text-align: center;
-    width: 220px;
-    height: 164px;
-}
-
-img{
-    position: relative;
-    float: left;
-    width:  inherit;
-    height: inherit;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-    border-radius: 70px 70px 70px 70px;
-    -moz-border-radius: 70px 70px 70px 70px;
-    -webkit-border-radius: 70px 70px 70px 70px;
-    border: 0px solid #000000;
-    background-color: #d1c9b8;
-}
-
-.shadow {
-    /*width: 200px;
-    height: 164px;*/
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.project:hover .shadow{
-    border-radius: 70px 70px 70px 70px;
-    -moz-border-radius: 70px 70px 70px 70px;
-    -webkit-border-radius: 70px 70px 70px 70px;
-    border: 0px solid #000000;
-    background: rgba(211,211,211, 0.72);
-}
-
-.img__description {
-    transform: translate(0%, 50%);
-    color: #00000;
-    visibility: hidden;
-    opacity: 0;
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
-}
-
-.project:hover .img__description {
-    visibility: visible;
-    opacity: 1;
-}
-
-@media screen and (max-width: 950px) {
-    .one {
-        float: none;
-        width:auto;
-        margin-right:0;
-    }
-    .two {
-        margin: 0 0 0 12%;
-    }
-}
-
-.p {
-   font-family: 'Merriweather', serif;
-    font-weight:300;
-    font-size: 9pt;
-    letter-spacing: 0.2px;
-    line-height: 265%;
-    max-width: 50ch;
-    color: #484848;
-}
-
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: #484848;
-    font-size: 20pt;
-}
-
-.aboutme  {
-   font-family: 'Merriweather', serif;
-    font-weight:300;
-    font-size: 9pt;
-    letter-spacing: 0.2px;
-    line-height: 265%;
-    max-width: 50ch;
-    color: #484848;
-}
-
-.aboutme a:link, a:visited {
-   font-family: 'Merriweather', serif;
-   font-weight:300;
-    font-size: 9pt;
-    letter-spacing: 0.2px;
-    line-height: 165%;
-    max-width: 50ch;
-    color: #484848;
-    text-decoration: underline;
-}
-
-.icons a:link, a:visited {
-    color: #484848;
-    opacity: 0.6;
-    font-size: 15pt;
-}
-
-.icons a:hover {
-    color: #484848;
-    opacity: 1;
-    font-size: 15pt;
-}
-
-
-.icons a:visited {
-    text-decoration: none;
-}
-
-.icons a:active {
-    text-decoration: #222222;
-}
-
 
 * {
-	margin: 0;
-	padding: 0;
+  cursor:default;
 }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin:0;
+  background:var(--page-color);
+  font-family: monospace;
+  line-height:1.3em;
+  color:var(--text-color)
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit
+}
+
+a:not(.no-style) {
+  color:inherit;
+  text-decoration:none;
+  transition:color 0.2s ease-in-out
+}
+
+a:not(.no-style):hover {
+  color:var(--text-hover-color)
+}
+
+a:not(.no-style)::before {
+  color:var(--text-color)
+}
+
+a:not(.no-style)::after {
+  color:var(--text-color)
+}
+
 /*
-.container_left {
-    padding: 25% 5px 25px 50px;
-}
-
-.container_right {
-    padding: 0% 5px 25px 5px;
-}
+Custom IDs
 */
+#header {
+  min-height: 50px;
+}
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+#content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*
+Custom Classes
+*/
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  min-height: 50px;
+	font-family: JetBrains Mono, monospace;
+	font-size: .8125rem;
+	line-height: 1.1rem;
+  margin-bottom: 0px;
+  z-index: 30;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 12px 16px;
+  z-index: 1;
+	top: 100%;
+	left: -1rem;
+	margin-left: -2px;
+	margin-right: -2px;
+  border: 2px solid black;
+  background-color: white;
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	box-shadow: 4px 4px rgba(0, 0, 0, .25);
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
+/*
+Main Content
+*/
+.receipt {
+  width: 500px;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 4px;
+	box-shadow: 4px 4px rgba(0, 0, 0, .25);
+}
+
+.header {
+  text-align: center;
+  border-bottom: 2px dashed #000;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+}
+
+.logo {
+  background-color: #000;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.receipt-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.business-name {
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  margin: 5px 0;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.items-table th,
+.items-table td {
+  border: 1px solid #000;
+  padding: 2px 1px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.items-table th {
+  background: #e0e0e0;
+  font-weight: bold;
+}
+
+.items-table tr:hover:not(.no-style) {
+	--tw-text-opacity: 1;
+	color: rgb(205 63 37/var(--tw-text-opacity))
+}
+
+.qty {
+  text-align: center;
+  width: 30px;
+}
+
+.amount {
+  text-align: right;
+  width: 80px;
+}
+
+.handwriting {
+  font-family: JetBrains Mono, monospace;
+  font-size: 12px;
 }
